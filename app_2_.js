@@ -1,10 +1,10 @@
-/*let afirmacion = prompt("Desea ingresar al sitio?");
+let afirmacion = prompt("Desea ingresar al sitio?");
 
 if(afirmacion ="Si"){
         alert("Inicie sesión");
 }
 
-function login(){
+/*function login(){
   let form = document.form;
   let user = form.usuario.value;
   let pass = form.contraseña.value;
