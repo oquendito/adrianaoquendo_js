@@ -29,7 +29,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body class="dark-theme">
-  <header class="background-4">
+    <!-- <div class="loading" id="main-loader" data-target="body" style="display:block;width:100%;height:100vh;text-align:center;background-color:#000;color:#fff;">
+            <div class="vertical-align" style="position:relative;top:50%;transform:translateY(-50%);">
+                <img src="img/logo.png" alt="Insignia Education Logo" id='main-loader-logo' style="width: 150px;">
+                <div class="loading-text tr" data-translation-cod="loaders.loading" style="font-family:'Noto Sans',sans serif">Loading</div>
+                <div class="loader-dual-ring"></div>
+                <noscript>
+                    Este sitio necesita Javascript habilitado para funcionar
+                </noscript>
+            </div>
+        </div> -->
+    <header class="background-4">
       <nav class="box row row-2-20-80">
         <h1 id="main-logo" class="padding-0 row row-2-50-100">
           <img src="img/gatito.svg" alt="logo" />
@@ -94,33 +104,11 @@
         <div class="vertical-align box">
           <h3 class="text-center">Inicio de sesion</h3>
           <div class="row">
-            <form name="form" action="#" method="POST" >
-              <div class="input-holder">
-                <div class="btn">Usuario</div>
-                <div class="input">
-                  <div class="fa fa-envelope"></div>
-                  <input
-                    type="text"
-                    name="usuario"
-                    placeholder="ingresa tu usuario"
-                  />
-                </div>
-              </div>
-              <div class="input-holder">
-                <div class="btn">Contraseña</div>
-                <div class="input">
-                  <div class="fa fa-lock"></div>
-                  <input
-                    type="password"
-                    name="contraseña"
-                    placeholder="ingresa tu password"
-                  />
-                </div>
-              </div>
-              <div class="row">
-                <button onclick="login()";>Acceder</button>
-              </div>
-            </form>
+            <form>
+            <input id="usuario" type="text" placeholder="Ingresa usuario" class="form-control my-2">
+            <input id="password" type="text" placeholder="Ingresa contraseña" class="form-control my-2">
+            <button id="button" class="btn btn-success" type="reset">Acceder</button>
+          </form>
           </div>
         </div>
       </div>
