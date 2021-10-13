@@ -47,6 +47,11 @@ if(user.login(prompt("ingresa la clave"))){
   console.log('clave incorrecta');
 }*/
 
+function getValue(){
+  var x=document.getElementById("inicioSesion");
+  alert(x.innerHTML);
+}
+
 function getDB(){
   try{
       if(typeof window.baseDatos == typeof undefined || window.baseDatos == null){
