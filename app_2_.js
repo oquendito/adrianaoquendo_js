@@ -1,10 +1,10 @@
-let afirmacion = prompt("Desea ingresar al sitio?");
+/*let afirmacion = prompt("Desea ingresar al sitio?");
 
 if(afirmacion ="Si"){
         alert("Inicie sesión");
 }
 
-/*function login(){
+function login(){
   let form = document.form;
   let user = form.usuario.value;
   let pass = form.contraseña.value;
@@ -46,6 +46,12 @@ if(user.login(prompt("ingresa la clave"))){
 }else{
   console.log('clave incorrecta');
 }*/
+
+function userNameEntered() {
+  var user = document.forms["user"]["name"].value;
+  document.getElementById("Name").innerHTML = "Bienvenid@ " + user + "!";
+  return false;
+}
 
 function getValue(){
   var x=document.getElementById("inicioSesion");
@@ -93,3 +99,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
   });
 });
+
+localStorage.setItem('usuario', 'password');
+localStorage.setItem('usuario', JSON.stringify(this.usuario));
+
+/*let arrayUsuarios = [];
+let formulario = document.querySelector("#formulario")
+let inputUsuario = document.querySelector("#iUsuario");
+
+let usuarioI = formulario.children[1].value;
+let passwordI = formulario.children[5].value;
+
+let contenedor = document.querySelector("#usuarioIngresado");
+let mostrarTodos = document.querySelector("#mostrarTodos");
+let parrafo = mostrarTodos.getElementsByTagName("p");
+let bandera = false;
+
+formulario.addEventListener("submit" , agregarUsuario);
+btnMostrar.addEventListener("click" , MostrarUsuarios);
+
+inputUsuario.focus();
+
+function MostrarUsuarios(e) {
+        e.preventDefault();
+        let i = 0;
+        mostrarTodos.innerHTML = '<h3< Lista de Usuarios:</h3>';
+        for (const usuario of arrayUsuarios){
+        mostrarTodos.innerHTML += `
+      <p><strong> Usuario:</strong> ${usuarioI}</p>
+      <p><strong> Password: </strong> ${passwordI}</p>
+      <hr>`;
+        }
+      }
+      function agregarAlDom() {
+    contenedor.innerHTML = `<h3>Ultimo inicio de sesion</h3>
+  <p><strong> Usuario:</strong> ${usuarioI}</p>
+  <p><strong> Password: </strong> ${passwordI}</p>
+  <hr>`;
+}*/
+
