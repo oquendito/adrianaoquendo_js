@@ -74,8 +74,5 @@ document.addEventListener("DOMContentLoaded", function() {
           console.error('No se guardo');
       }
 
-localStorage.setItem('usuario', 'password');
-localStorage.setItem('usuario', JSON.stringify(this.usuario));
-
   });
 });
