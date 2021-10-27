@@ -1,27 +1,11 @@
 //inicio de sesion de usuario
-console.log(user);
-
-class User {
-  constructor(name,email,pass) {
-      this.name = name;
-      this.email = email;
-      this.pass = window.btoa(unescape(encodeURIComponent( pass )));
-      console.log(this);
-  }
-  login(pass){
-      return this.pass == window.btoa(unescape(encodeURIComponent( pass ))) ;
-  }
+$('#accept').click(function() {
+  if ($('#buybtn').is(':disabled')) {
+  $('#buybtn').removeAttr('disabled');
+} else {
+  $('#buybtn').attr('disabled', 'disabled');
 }
-let user_name  = prompt('Ingresa el nombre'),
-  user_email = prompt('Ingresa el correo'),
-  user_pass  = prompt('Ingresa la clave'),
-  user = new User(user_name,user_email,user_pass);
-if(user.login(prompt("ingresa la clave"))){
-  console.log('Login valido');
-}else{
-  console.log('clave incorrecta');
-}
-
+});
 
 function userNameEntered() {
   var user = document.forms["user"]["name"].value;
@@ -65,14 +49,15 @@ class Persona {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { 
-  document.getElementById('button').addEventListener("click", function() { 
+document.addEventListener("DOMContentLoaded", function(event) { 
+  document.getElementById('button').addEventListener("click", function(event) { 
       let user = new Persona(document.getElementById("usuario").value, document.getElementById("password").value);
       if(user.almacenar()){
           alert(`Usuario guardado correctamente. Cantidad de usuarios registrados: ${(getDB()).length}`);
       }else{
           console.error('No se guardo');
       }
-
   });
 });
+
+confirmacionDeAcceso()
